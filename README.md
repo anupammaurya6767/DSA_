@@ -5,7 +5,6 @@
 [![Issues][issues-sachu]][issues-url]
 [![MIT License][license-sachu]][license-url]
 [![LinkedIn][linkedin-sachu]][linkedin-url]
-[![Portfolio][portfolio-sachu]][portfolio-url]
 
 # DATA STRUCTURES & ALGORITHMS
 <b>Note</b>: Please fetch upstream before making pull request to update your local repo.
@@ -112,5 +111,3 @@ Now submit the pull request.
 [license-url]: https://github.com/anupammaurya6767/DSA_/blob/master/LICENSE
 [linkedin-sachu]: https://img.shields.io/badge/LinkedIn--yellow?style=flat-square&logo=linkedin
 [linkedin-url]: https://www.linkedin.com/in/anupam-maurya-b9a04a225/
-[portfolio-sachu]: https://img.shields.io/badge/Portfolio--red?style=flat-square&logo=clickup
-[portfolio-url]: https://www.noobkoda.me/
