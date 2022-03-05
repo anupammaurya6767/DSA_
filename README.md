@@ -108,6 +108,6 @@ Now submit the pull request.
 [issues-sachu]: https://img.shields.io/github/issues/anupammaurya6767/DSA_.svg?style=flat-square
 [issues-url]: https://github.com/anupammaurya6767/DSA_/issues
 [license-sachu]: https://img.shields.io/github/license/anupammaurya6767/DSA_.svg?style=flat-square
-[license-url]: https://github.com/anupammaurya6767/DSA_/blob/master/LICENSE
+[license-url]: https://github.com/anupammaurya6767/DSA_/blob/main/LICENSE
 [linkedin-sachu]: https://img.shields.io/badge/LinkedIn--yellow?style=flat-square&logo=linkedin
 [linkedin-url]: https://www.linkedin.com/in/anupam-maurya-b9a04a225/
