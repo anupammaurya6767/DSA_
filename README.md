@@ -1,4 +1,13 @@
-# CP + DSA
+ 
+[![Contributors][contributors-sachu]][contributors-url]
+[![Forks][forks-sachu]][forks-url]
+[![Stargazers][stars-sachu]][stars-url]
+[![Issues][issues-sachu]][issues-url]
+[![MIT License][license-sachu]][license-url]
+[![LinkedIn][linkedin-sachu]][linkedin-url]
+[![Portfolio][portfolio-sachu]][portfolio-url]
+
+# DATA STRUCTURES & ALGORITHMS
 <b>Note</b>: Please fetch upstream before making pull request to update your local repo.
 <br/>
 To contribute, add your code / file in respective folders.
@@ -88,3 +97,20 @@ If you go to your repository on GitHub, you'll see a `Compare & pull request` bu
 
 Now submit the pull request.
 
+
+
+
+[contributors-sachu]: https://img.shields.io/github/contributors/anupammaurya6767/DSA_.svg?style=flat-square
+[contributors-url]: https://github.com/sachuverma/anupammaurya6767/DSA_/graphs/contributors
+[forks-sachu]: https://img.shields.io/github/forks/anupammaurya6767/DSA_.svg?style=flat-square
+[forks-url]: https://github.com/anupammaurya6767/DSA_/network/members
+[stars-sachu]: https://img.shields.io/github/stars/anupammaurya6767/DSA_.svg?style=flat-square
+[stars-url]: https://github.com/anupammaurya6767/DSA_/stargazers
+[issues-sachu]: https://img.shields.io/github/issues/anupammaurya6767/DSA_.svg?style=flat-square
+[issues-url]: https://github.com/anupammaurya6767/DSA_/issues
+[license-sachu]: https://img.shields.io/github/license/anupammaurya6767/DSA_.svg?style=flat-square
+[license-url]: https://github.com/anupammaurya6767/DSA_/blob/master/LICENSE
+[linkedin-sachu]: https://img.shields.io/badge/LinkedIn--yellow?style=flat-square&logo=linkedin
+[linkedin-url]: https://www.linkedin.com/in/anupam-maurya-b9a04a225/
+[portfolio-sachu]: https://img.shields.io/badge/Portfolio--red?style=flat-square&logo=clickup
+[portfolio-url]: https://www.noobkoda.me/
