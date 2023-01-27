@@ -1,37 +1,16 @@
 class Solution {
 public:
-    bool checkValidString(string sp) {
-        stack<int>star,open;
-        for(int i=0;i<sp.size();i++)
-        {
-           if(sp[i]=='(')
-               open.push(i);
-            else if(sp[i]=='*')
-                star.push(i);
-            else{
-                if(!open.empty())
-                    open.pop();
-                else if(!star.empty())
-                    star.pop();
-                else
-                    return false;
-            }
-                
+   bool checkValidString(string s) {
+        int cmin = 0, cmax = 0;
+        for (char c : s) {
+            if (c == '(')
+                cmax++, cmin++;
+            if (c == ')')
+                cmax--, cmin = max(cmin - 1, 0);
+            if (c == '*')
+                cmax++, cmin = max(cmin - 1, 0);
+            if (cmax < 0) return false;
         }
-        
-        while(!open.empty())
-        {
-            if(star.empty())
-                return false;
-            else if(star.top()>open.top())
-            {
-                star.pop();
-                open.pop();
-            }else
-                return false;
-                
-        }
-        
-        return true;
+        return cmin == 0;
     }
 };
