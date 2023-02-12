@@ -30,10 +30,10 @@ public:
             m[line] = node->val;
             
             if(node->left)
-            q.push({node->left,line-1});
+            q.push({node->left,line+1});
             
             if(node->right)
-            q.push({node->right,line-1});
+            q.push({node->right,line+1});
         }
         
         for(auto it:m)
@@ -41,7 +41,6 @@ public:
             ans.push_back(it.second);
         }
         
-        reverse(ans.begin(),ans.end());
         
         return ans;
         
