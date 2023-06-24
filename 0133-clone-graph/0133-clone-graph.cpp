@@ -23,20 +23,22 @@ class Solution {
 public:
     Node* dfs(Node* cur,unordered_map<Node*,Node*>& mp)
     {
-        vector<Node*> neighbour;
-        Node* clone=new Node(cur->val);
-        mp[cur]=clone;
-            for(auto it:cur->neighbors)
+        vector<Node*>neighbour;
+        Node* copy = new Node(cur->val);
+        mp[cur]=copy;
+        
+        for(auto i:cur->neighbors)
+        {
+            if(mp.find(i)!=mp.end())
             {
-                if(mp.find(it)!=mp.end())   //already clone and stored in map
-                {
-                    neighbour.push_back(mp[it]);    //directly push back the clone node from map to neigh
-                }
-                else
-                    neighbour.push_back(dfs(it,mp));
+                neighbour.push_back(mp[i]);
+            }else{
+                neighbour.push_back(dfs(i,mp));
             }
-            clone->neighbors=neighbour;
-            return clone;
+        }
+        
+        copy->neighbors = neighbour;
+        return copy;
     }
     Node* cloneGraph(Node* node) {
         unordered_map<Node*,Node*> mp;
