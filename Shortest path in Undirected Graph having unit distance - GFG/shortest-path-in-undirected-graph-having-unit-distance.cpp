@@ -9,41 +9,42 @@ using namespace std;
 class Solution {
   public:
     vector<int> shortestPath(vector<vector<int>>& edges, int N,int M, int src){
-    //Create an adjacency list of size N for storing the undirected graph.
-        vector<int> adj[N]; 
-        for(auto it : edges) {
-            adj[it[0]].push_back(it[1]); 
-            adj[it[1]].push_back(it[0]); 
+        // code here
+        vector<int>adj[N];
+        for(int i=0;i<M;i++)
+        {
+            int a = edges[i][0];
+            int b = edges[i][1];
+            adj[a].push_back(b);
+            adj[b].push_back(a);
         }
-
-        //A dist array of size N initialised with a large number to 
-        //indicate that initially all the nodes are untraversed.    
-    
-        int dist[N];
-        for(int i = 0;i<N;i++) dist[i] = 1e9;
-        // BFS Implementation.
-        dist[src] = 0; 
-        queue<int> q;
-        q.push(src); 
-        while(!q.empty()) {
-            int node = q.front(); 
-            q.pop(); 
-            for(auto it : adj[node]) {
-                if(dist[node] + 1 < dist[it]) {
-                    dist[it] = 1 + dist[node]; 
-                    q.push(it); 
+        queue<int>q;
+        q.push(src);
+        
+        vector<int>dist(N,1e9);
+        dist[src] = 0;
+        
+        while(!q.empty())
+        {
+            int node = q.front();
+            q.pop();
+            for(auto it:adj[node])
+            {
+                if(dist[node]+1<dist[it])
+                {
+                    dist[it] = 1+dist[node];
+                    q.push(it);
                 }
             }
         }
-        // Updated shortest distances are stored in the resultant array ‘ans’.
-        // Unreachable nodes are marked as -1. 
-        vector<int> ans(N, -1);
-        for(int i = 0;i<N;i++) {
-            if(dist[i] != 1e9) {
-                ans[i] = dist[i]; 
-            }
+        
+        for(int i=0;i<N;i++)
+        {
+            if(dist[i]==1e9)
+            dist[i] = -1;
         }
-        return ans; 
+        
+        return dist;
     }
 };
 
