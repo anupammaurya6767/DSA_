@@ -3,13 +3,14 @@ public:
 
 
 
+
 int calculate(string s) {
-    stack<int> num;  // stack to store numbers
-    stack<char> op;  // stack to store operators and parentheses
+    deque<int> numbers;
+    deque<int> signs;
     int n = s.size();
     int currentNumber = 0;
     int result = 0;
-    int sign = 1;  // 1 means positive, -1 means negative
+    int sign = 1;
 
     for (int i = 0; i < n; ++i) {
         char c = s[i];
@@ -25,14 +26,14 @@ int calculate(string s) {
         } else if (c == '-') {
             sign = -1;
         } else if (c == '(') {
-            num.push(result);
-            op.push(sign);
+            numbers.push_back(result);
+            signs.push_back(sign);
             result = 0;
             sign = 1;
         } else if (c == ')') {
-            result = op.top() * result + num.top();
-            op.pop();
-            num.pop();
+            result = signs.back() * result + numbers.back();
+            signs.pop_back();
+            numbers.pop_back();
         }
     }
     return result;
